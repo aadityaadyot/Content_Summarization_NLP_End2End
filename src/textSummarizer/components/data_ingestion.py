@@ -1,9 +1,9 @@
 import os
 import urllib.request as request
 import zipfile
-from textSummarizer.logging import logger
-from textSummarizer.utils.common import get_size
-from textSummarizer.entity import DataIngestionConfig
+from src.textSummarizer.logging import logger
+from src.textSummarizer.utils.common import get_size
+from src.textSummarizer.entity import DataIngestionConfig
 from pathlib import Path
 
 

@@ -4,16 +4,14 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from datasets import load_dataset, load_from_disk
 import torch
 import os
-from textSummarizer.entity import ModelTrainerConfig
+from src.textSummarizer.entity import ModelTrainerConfig
 
 
 
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
         self.config = config
-
-
-    
+   
     def train(self):
         device = "cuda" if torch.cuda.is_available() else "cpu"
         tokenizer = AutoTokenizer.from_pretrained(self.config.model_ckpt)
